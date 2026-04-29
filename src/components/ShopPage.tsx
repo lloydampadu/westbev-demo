@@ -34,6 +34,7 @@ export function ShopPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#c9a96e]/5 to-transparent" />
         <div className="max-w-7xl mx-auto px-6 py-16 relative">
           <p className="text-[#c9a96e] text-xs uppercase tracking-[0.4em] mb-3">Exclusive Collection</p>
+          <p className="font-[family-name:var(--font-great-vibes)] text-[#c9a96e]/60 text-3xl mb-2">Purveyors of Fine Liquors</p>
           <h1 className="font-serif text-5xl md:text-6xl font-bold text-white leading-tight">
             Fine Spirits,<br />
             <span className="text-[#c9a96e]">Delivered to You</span>

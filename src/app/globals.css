@@ -9,8 +9,9 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-jost);
   --font-serif: var(--font-playfair);
+  --font-script: var(--font-great-vibes);
   --color-gold: var(--gold);
   --color-gold-light: var(--gold-light);
   --color-dark: var(--dark);

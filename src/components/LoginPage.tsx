@@ -18,7 +18,7 @@ export function LoginPage() {
             W
           </div>
           <h1 className="font-serif text-4xl font-bold text-white mb-2">WestBev Africa</h1>
-          <p className="text-[#c9a96e] text-sm uppercase tracking-[0.3em] mb-10">
+          <p className="font-[family-name:var(--font-great-vibes)] text-[#c9a96e] text-3xl mb-10">
             Purveyors of Fine Liquors
           </p>
           <div className="bg-[#141414] border border-[#252525] rounded-2xl p-8">
