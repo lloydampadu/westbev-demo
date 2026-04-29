@@ -44,8 +44,8 @@ export function LoginPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
-    const success = login(email, password);
-    if (!success) setError("Invalid credentials. Please contact WestBev for access.");
+    const success = login(email.trim(), password);
+    if (!success) setError("Invalid client number or password. Contact WestBev for access.");
   };
 
   return (
@@ -66,12 +66,12 @@ export function LoginPage() {
             </div>
           )}
           <div>
-            <label className="block text-xs uppercase tracking-wider text-white/50 mb-2">Email</label>
+            <label className="block text-xs uppercase tracking-wider text-white/50 mb-2">Client Number</label>
             <input
-              type="email"
+              type="text"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="your@email.com"
+              placeholder="e.g. 12841"
               className="w-full bg-[#0a0a0a] border border-[#252525] rounded-lg px-4 py-3 text-white placeholder-white/20 focus:outline-none focus:border-[#c9a96e] transition-colors"
               required
             />
@@ -95,7 +95,7 @@ export function LoginPage() {
           </button>
           <div className="text-center">
             <p className="text-white/30 text-xs">
-              Demo: diplomat@westbev.africa / demo2026
+              Demo: Client No. 12841 / wb2026
             </p>
           </div>
         </form>

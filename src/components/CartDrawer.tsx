@@ -56,6 +56,7 @@ export function CartDrawer({ open, onClose, onCheckout }: CartDrawerProps) {
                       src={product.image}
                       alt={product.name}
                       className="w-16 h-20 object-cover rounded-lg flex-shrink-0"
+                      referrerPolicy="no-referrer"
                     />
                     <div className="flex-1 min-w-0">
                       <h3 className="text-sm font-medium text-white truncate">{product.name}</h3>

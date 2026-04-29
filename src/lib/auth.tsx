@@ -18,19 +18,19 @@ interface AuthContext {
 
 const AuthCtx = createContext<AuthContext | null>(null);
 
-// Demo accounts for the presentation
+// Demo accounts — clients use a client number + password
 const DEMO_ACCOUNTS: Record<string, { password: string; user: User }> = {
-  "diplomat@westbev.africa": {
-    password: "demo2026",
+  "12841": {
+    password: "wb2026",
     user: {
       name: "H.E. Ambassador Kwame Mensah",
-      email: "diplomat@westbev.africa",
+      email: "ambassador.mensah@gh.gov",
       organization: "Embassy of Ghana",
       role: "Diplomat",
     },
   },
-  "admin@westbev.africa": {
-    password: "admin2026",
+  "98734": {
+    password: "wb2026",
     user: {
       name: "WestBev Admin",
       email: "admin@westbev.africa",

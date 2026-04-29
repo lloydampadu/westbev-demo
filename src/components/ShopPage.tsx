@@ -49,23 +49,24 @@ export function ShopPage() {
       {/* Featured */}
       <section className="max-w-7xl mx-auto px-6 pb-12">
         <h2 className="text-xs uppercase tracking-[0.3em] text-[#c9a96e] mb-6">Featured Selections</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
           {featured.map((p) => (
             <button
               key={p.id}
               onClick={() => handleAdd(p)}
-              className="group bg-[#141414] border border-[#252525] rounded-xl p-4 hover:border-[#c9a96e]/40 transition-all text-left"
+              className="group bg-[#141414] border border-[#252525] rounded-xl p-3 hover:border-[#c9a96e]/40 transition-all text-left"
             >
-              <div className="aspect-[3/4] bg-gradient-to-b from-[#1a1a1a] to-[#0e0e0e] rounded-lg mb-3 flex items-center justify-center overflow-hidden">
+              <div className="aspect-[3/4] rounded-lg mb-3 overflow-hidden">
                 <img
                   src={p.image}
                   alt={p.name}
-                  className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerPolicy="no-referrer"
                 />
               </div>
-              <div className="text-xs text-[#c9a96e] uppercase tracking-wider">{p.category}</div>
-              <div className="text-sm font-medium text-white mt-1 line-clamp-2">{p.name}</div>
-              <div className="text-sm font-bold text-[#c9a96e] mt-1">GHS {p.price.toLocaleString()}</div>
+              <div className="text-[10px] text-[#c9a96e] uppercase tracking-wider truncate">{p.category}</div>
+              <div className="text-xs font-medium text-white mt-0.5 line-clamp-2 leading-snug">{p.name}</div>
+              <div className="text-xs font-bold text-[#c9a96e] mt-1">GHS {p.price.toLocaleString()}</div>
             </button>
           ))}
         </div>
@@ -125,23 +126,22 @@ export function ShopPage() {
                     src={p.image}
                     alt={p.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    referrerPolicy="no-referrer"
                   />
-                  <div className="absolute top-3 left-3">
-                    <span className="bg-black/60 backdrop-blur-sm text-[#c9a96e] text-[10px] uppercase tracking-wider px-2 py-1 rounded-full">
+                  <div className="absolute bottom-2 left-2 right-2 flex items-end justify-between gap-1">
+                    <span className="bg-black/70 backdrop-blur-sm text-[#c9a96e] text-[9px] uppercase tracking-wide px-2 py-0.5 rounded-full truncate max-w-[60%]">
                       {p.category}
                     </span>
-                  </div>
-                  {p.abv && (
-                    <div className="absolute top-3 right-3">
-                      <span className="bg-black/60 backdrop-blur-sm text-white/60 text-[10px] px-2 py-1 rounded-full">
+                    {p.abv && (
+                      <span className="bg-black/70 backdrop-blur-sm text-white/60 text-[9px] px-2 py-0.5 rounded-full flex-shrink-0">
                         {p.abv}
                       </span>
-                    </div>
-                  )}
+                    )}
+                  </div>
                 </div>
                 <div className="p-4">
-                  <div className="text-[10px] text-white/40 uppercase tracking-wider">{p.origin}</div>
-                  <h3 className="text-white font-medium mt-1 line-clamp-2">{p.name}</h3>
+                  <h3 className="text-white font-medium line-clamp-2 leading-snug">{p.name}</h3>
+                  <div className="text-[10px] text-white/30 uppercase tracking-wider mt-0.5">{p.origin}</div>
                   <p className="text-white/40 text-xs mt-1 line-clamp-2">{p.description}</p>
                   <div className="flex items-center justify-between mt-4">
                     <span className="text-[#c9a96e] font-bold text-lg">GHS {p.price.toLocaleString()}</span>

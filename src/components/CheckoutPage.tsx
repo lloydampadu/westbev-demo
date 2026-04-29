@@ -155,7 +155,7 @@ export function CheckoutPage({ onBack, onConfirm }: CheckoutPageProps) {
                 <div className="space-y-3 max-h-64 overflow-y-auto">
                   {items.map(({ product, qty }) => (
                     <div key={product.id} className="flex items-center gap-3">
-                      <img src={product.image} alt={product.name} className="w-10 h-12 object-cover rounded" />
+                      <img src={product.image} alt={product.name} className="w-10 h-12 object-cover rounded" referrerPolicy="no-referrer" />
                       <div className="flex-1 min-w-0">
                         <div className="text-white text-xs truncate">{product.name}</div>
                         <div className="text-white/30 text-xs">Qty: {qty}</div>
